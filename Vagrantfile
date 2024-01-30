@@ -13,8 +13,10 @@ Vagrant.configure(2) do |config|
   config.vm.provider 'virtualbox' do |vb, override|
     # We limit resources when running on CI to avoid resource exhaustion and it isn't used for grading stuff or
     # other things we do in dev.
-    vb.memory = ON_CI ? 1024 : 2048
-    vb.cpus = ON_CI ? 1 : 2
+    # vb.memory = ON_CI ? 1024 : 2048
+    # vb.cpus = ON_CI ? 1 : 2
+    vb.memory = 1024
+    vb.cpus = 1
 
     # When you put your computer (while running the VM) to sleep, then resume work some time later the VM will be out
     # of sync timewise with the host for however long the host was asleep. Of course, the VM by default will
