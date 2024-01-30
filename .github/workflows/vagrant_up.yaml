@@ -20,6 +20,10 @@ jobs:
       # versions are close enough that we are fine without it.
       # - run: vagrant plugin install vagrant-vbguest
       - run: NO_SUBMISSIONS=1 vagrant up ubuntu-22.04
+        
+      - name: action-debug
+        uses: fawazahmed0/action-debug@main
+        
       - name: Validate image
         run: curl --show-error --fail --include http://localhost:1511
       - name: Acquire Job ID
