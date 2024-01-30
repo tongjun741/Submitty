@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
   # The time in seconds that Vagrant will wait for the machine to boot and be accessible.
   config.vm.boot_timeout = 600
 
-  vm_name = 'ubuntu-22.04'
+  # vm_name = 'ubuntu-22.04'
 
   config.vm.provider 'virtualbox' do |vb, override|
     # We limit resources when running on CI to avoid resource exhaustion and it isn't used for grading stuff or
